@@ -1,0 +1,6 @@
+qrcode
+numpy
+torch
+hashlib
+ecdsa
+base58

@@ -1,0 +1,290 @@
+{
+  "last_node_id": 17,
+  "last_link_id": 14,
+  "nodes": [
+    {
+      "id": 11,
+      "type": "SaveImage",
+      "pos": [
+        1459.857177734375,
+        160.42860412597656
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "SDFX"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "SaveImage",
+      "pos": [
+        1450.71435546875,
+        706.8572998046875
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "SDFX"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        1460.857177734375,
+        434.42860412597656
+      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 14,
+          "dir": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 16,
+      "type": "Display Any (rgthree)",
+      "pos": [
+        1443,
+        960
+      ],
+      "size": {
+        "0": 315.857177734375,
+        "1": 116.1429443359375
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 13,
+          "dir": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Display Any (rgthree)"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 10,
+      "type": "ComfyUiBitcoinSuite",
+      "pos": [
+        837,
+        246
+      ],
+      "size": {
+        "0": 315,
+        "1": 118
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "PUBLIC_KEY",
+          "type": "STRING",
+          "links": [
+            14
+          ],
+          "shape": 3
+        },
+        {
+          "name": "PUBLIC_KEY_QR",
+          "type": "IMAGE",
+          "links": [
+            10
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "PRIVATE_KEY",
+          "type": "STRING",
+          "links": [
+            13
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "PRIVATE_KEY_QR",
+          "type": "IMAGE",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyUiBitcoinSuite"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        235,
+        444
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      10,
+      10,
+      1,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      12,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      10,
+      3,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      10,
+      2,
+      16,
+      0,
+      "*"
+    ],
+    [
+      14,
+      10,
+      0,
+      15,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "PUBLIC_KEY",
+      "bounding": [
+        1450,
+        86,
+        335,
+        434
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "PRIVATE_KEY",
+      "bounding": [
+        1433,
+        636,
+        341,
+        418
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
