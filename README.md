@@ -27,7 +27,7 @@ Feel free to open pull requests to add nodes to this suite pack.
     
 ## Usage
 
-Launch ComfyUi, then simply drag and drop the example workflow
+Launch ComfyUi, then simply drag and drop [the example workflow](/blob/main/example_workflow_load_image.json)
 
 ## Development
 
