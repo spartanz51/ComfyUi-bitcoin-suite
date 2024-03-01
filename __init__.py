@@ -82,7 +82,7 @@ class ComfyUiBitcoinSuite:
     RETURN_TYPES = ("STRING","IMAGE", "STRING","IMAGE",)
     RETURN_NAMES = ("PUBLIC_KEY", "PUBLIC_KEY_QR", "PRIVATE_KEY", "PRIVATE_KEY_QR")
     FUNCTION = "start"
-    CATEGORY = "text"
+    CATEGORY = "bitcoin"
 
     def start(self, image, salt = ""):
         image_str = (str(image.tolist()) + salt).encode()
